@@ -1,0 +1,507 @@
+/* Reset */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/ HTML5 display-role reset for older browsers */ article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* fin reset */
+
+/* font face */
+
+@font-face {
+    font-family: "Gastromond";
+    src: url("fonts/Gastromond.woff2") format("woff2"), url("Gastromond.woff") format("woff");
+  }
+  
+  @font-face {
+    font-family: "Superclarendon";
+    src: url("fonts/Superclarendon-Regular.woff2") format("woff2"), url("Superclarendon-Regular.woff")format("woff");
+  }
+
+/* mobile first */
+
+/* header */
+
+html,
+body{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+main{
+    margin-top: 4.6875rem;
+    max-width: 100%;
+    height: 100%;
+}
+
+img{
+    max-width: 100%;
+}
+
+.navBar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    background-color: #62755b;
+    width: 100%;
+    color: #fff;
+    border-bottom: .125rem solid #f0bc00;
+    box-shadow: 0rem 0rem .625rem #000;
+    z-index: 1;
+}
+
+.logoIcon{
+    width: 3.125rem;
+    padding: .625rem;
+}
+
+.navList{
+    display: none;
+    position:absolute;
+    right: 0rem;
+    top: 1.875rem;
+    background-color: #62755b;
+    border: #fff solid .125rem;
+    box-shadow: 0rem .5rem 1rem 0rem #000;
+    z-index: 1;
+    font-family: "Superclarendon";
+    font-size: .8125rem;
+}
+
+
+.navList li{
+    padding: .75rem 1rem;
+}
+
+.navList a{
+    color: #fff;
+    text-decoration: none;
+}
+
+#burger:checked + .navList{
+    display: block;
+}
+
+#burger{
+    display: none;
+}
+
+
+
+/* main */
+
+/* nav jours de la semaine */
+
+.allSections{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.navDay{
+    text-align: center;
+    padding: 2rem;
+}
+
+.dayBtn{
+    cursor: pointer;
+    padding: .375rem;
+    margin-top: .625rem;
+    border: none;
+    border-radius: .625rem;
+    background-color: #62755b;
+    color: #fff;
+}
+
+.dayBtn.active{
+    background-color: #9fc193;
+}
+
+/* section recettes */
+
+.titles{
+    display: flex;
+    justify-content: space-around;
+}
+
+.sectionTitle {
+    text-align: center;
+    width: 8rem;
+    margin: .625rem;
+    padding: .5rem .75rem;
+    border-radius: .5rem;
+    background-color: #62755b;
+    color: #fff;
+    cursor: pointer;
+}
+
+.ingredientTitleMobile{
+    text-align: center;
+    width: 8rem;
+    margin: .625rem;
+    padding: .5rem .75rem;
+    border-radius: .5rem;
+    background-color: #62755b;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* section planning */
+
+.recipes{
+    margin: 1.25rem;
+}
+
+.meal{
+    width: 100%;
+    margin: .3125rem;
+}
+
+/* section petit déjeuner */
+
+.subTitle{
+    padding: 1.25rem;
+    margin-top: 1.25rem;
+    font-family: "Gastromond";
+    font-size: 1.25rem;
+}
+
+.plusBtn{
+    margin-left: .625rem;
+    border: .0625rem solid;
+    border-radius: 3.125rem;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.recipeItem{
+    display: flex;
+    justify-content: center;
+    gap: .3125rem; 
+}
+
+
+
+figcaption{
+    padding-top: .3125rem;
+    font-family: "Superclarendon";
+    font-size: 1rem;
+    text-align: center;
+}
+
+
+
+/* déjeuner et diner */
+
+.recipeItems{
+    display: flex;
+    gap: .3125rem;
+}
+
+/* section liste de courses */
+
+.shopContainer{
+    display: none;
+    flex-direction: column;
+    width: 50%;
+    padding: 5rem;
+    box-sizing: border-box;
+}
+
+.filters{
+    display: flex;
+    justify-content: center;
+}
+
+.select{
+    width: 50%;
+    padding: .375rem .625rem .375rem .375rem;
+    margin: 1.875rem;
+    border-radius: .625rem;
+}
+
+.shopList{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: left;
+    margin: 2.5rem;
+}
+
+.shopList li{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 1.25rem;
+    cursor: pointer;
+}
+
+/* javascript barrer liste de courses */
+
+.linethrough {
+    text-decoration: line-through;
+}
+
+/* javascript event */
+
+.hide{
+    display: none;
+}
+
+.show{
+    display: block;
+}
+
+#listeCourseBtnjs{
+    display: none;
+}
+
+
+/* desktop */
+
+@media (min-width: 800px){
+
+/* header */
+
+.navList{
+    display: flex;
+    box-shadow: none;
+    background: none;
+    gap: 1.875rem;
+    border: none;
+    margin-right: 2.5rem;
+    top: inherit;
+}
+
+.iconify{
+    display: none;
+}
+
+/* main */
+
+/* nav jours de la semaine */
+
+.allSections{
+    justify-content: center;
+    flex-direction: row;
+    height: 100%;
+}
+
+.navDay{
+    display: flex;
+    flex-direction: column;
+    background-color: #62755b;
+}
+
+.dayBtn{
+    width: 10rem;
+    height: 3.125rem;
+    margin: 1rem;
+    border-radius: 3.125rem;
+    font-size: 1.25rem;
+    font-family: "Superclarendon";
+}
+
+/* section recettes */
+
+.recipeSection{ /* content */
+    display: flex;
+}
+
+.recipeSection > section{
+    text-align: center;
+    padding: 3.0625rem 5%;
+}
+
+.planning{
+    width: 50%;
+    box-sizing: border-box;
+    border-right: .0625rem solid #000;
+}
+
+.sectionTitle{
+    display: inline-block;
+    margin-bottom: 3.125rem;
+}
+
+.ingredientTitleMobile{
+    display: none;
+}
+
+/* section planning */
+
+.recipes{
+    margin: 0;
+}
+
+/* petit déjeuner*/
+
+.subTitle{
+    margin-bottom: 1.875rem;
+    padding: 0;
+    text-align: left;
+}
+
+.smallPic{
+    font-size: .75rem;
+}
+
+/* section liste de courses*/
+
+.shopContainer{
+    display: block;
+}
+
+.select{
+    width: 100%;
+    padding: .75rem 1.25rem .75rem .75rem;
+    margin: 0;
+}
+
+.shopList li{
+    margin-bottom: 1.875rem;
+}
+
+.shopList span{
+    display: flex;
+    justify-content: space-evenly;
+    width: 6.25rem;
+}
+
+/* javascript annulation */
+
+.hide{
+    display: block;
+}
+
+#listeCourseBtnjs{
+    display: block;
+    display: inline-block;
+    margin-bottom: 3.125rem;
+}
+
+
+
+
+
+}

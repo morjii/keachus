@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keachus</title>
+    <link rel="stylesheet" href="final.css">
+    <link rel="shortcut icon" href="images/logo.svg">
+    <script defer src="final.js"></script>
+    <script defer src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
+</head>
+<body>
+
+    <header>
+        <nav class="navBar">
+            <div class="logo">
+                <a href="#"><img class="logoIcon" src="images/logo.svg" alt=""></a>
+            </div>
+            <input type="checkbox" class="burger" id="burger">
+            <ul class="navList">
+                <li class="listItem"><a href="#">Accueil</a></li>
+                <li class="listItem" ><a href="#">Rubriques</a></li>
+                <li class="listItem" ><a href="#">Notifications</a></li>
+                <li class="listItem"><a href="#">Profil</a></li>
+            </ul>
+            <label for="burger">
+                <span class="iconify" data-icon="dashicons:menu" style="font-size: 40px;"></span>
+            </label>
+        </nav>
+    </header>
+
+    <main>
+        <section class="allSections">
+
+            <nav class="navDay">
+                <button class="dayBtn">Lundi</button>
+                <button class="dayBtn active">Mardi</button>
+                <button class="dayBtn">Mercredi</button>
+                <button class="dayBtn">Jeudi</button>
+                <button class="dayBtn">Vendredi</button>
+                <button class="dayBtn">Samedi</button>
+                <button class="dayBtn">Dimanche</button>
+            </nav>
+
+            <div class="recipeSection">
+                <section class="planning">
+                    <div class="titles">
+                        <button class="sectionTitle" id="planningTitlejs">Planning</button>
+                        <button class="ingredientTitleMobile" id="ingredientTitlejs">Liste de courses</button>
+                    </div>
+                    <div class="recipes" id="recipeSectionjs">
+                        <section class="meal">
+                            <h2 class="subTitle">
+                                Petit dejeuner
+                                <input type="button" class="plusBtn" value="+">
+                            </h2>
+                            <div class="recipeItem">
+                                <figure><img class="recipePic" src="images/ptitdej.svg"> <figcaption>Buddha Bowl</figcaption></figure>
+                            </div>
+                        </section>
+
+                        <section class="meal">
+                                <h2 class="subTitle">
+                                    Dejeuner
+                                    <input type="button" class="plusBtn" value="+">
+                                </h2>
+                                <div class="recipeItems">
+                                    <figure><img class="recipePic" src="images/ptitdej.svg"> <figcaption class="smallPic">Buddha Bowl</figcaption></figure>
+                                    <figure><img class="recipePic" src="images/ptitdej.svg"> <figcaption class="smallPic">Buddha Bowl</figcaption></figure>
+                                    <figure><img class="recipePic" src="images/ptitdej.svg"> <figcaption class="smallPic">Buddha Bowl</figcaption></figure>
+                                </div>
+                            <section class="meal">
+                                <h2 class="subTitle">
+                                    Diner
+                                    <input type="button" class="plusBtn" value="+">
+                                </h2>
+                                <div class="recipeItems">
+                                    <figure><img class="recipePic" src="images/ptitdej.svg"> <figcaption class="smallPic">Buddha Bowl</figcaption></figure>
+                                    <figure><img class="recipePic" src="images/ptitdej.svg"> <figcaption class="smallPic">Buddha Bowl</figcaption></figure>
+                                    <figure><img class="recipePic" src="images/ptitdej.svg"> <figcaption class="smallPic">Buddha Bowl</figcaption></figure>
+                                </div>
+                            </section>
+                        </section>
+                    </div> <!--recipes-->
+                </section> <!--planning -->
+
+                <section class="shopContainer" id="shopContainerjs">
+                    <button class="sectionTitle" id="listeCourseBtnjs">Liste de courses</button>
+                    <div class="filters">
+                        <select class="select" name="filter">
+                            <option value="">Filtrer</option>
+                            <option value="lundi">Lundi</option>
+                            <option value="mardi">Mardi</option>
+                            <option value="mercredi">Mercredi</option>
+                            <option value="jeudi">Jeudi</option>
+                            <option value="vendredi">Vendredi</option>
+                            <option value="samedi">Samedi</option>
+                            <option value="dimanche">Dimanche</option>
+                        </select>
+                    </div>
+
+                    <div class="ingredients">
+                        <ul class="shopList" id="shopListjs">
+                            <li class="shopItem">
+                                <input type="checkbox" class="shopBtn" name="poulet" id="poulet">
+                                <label for="poulet">
+                                <span>Poulet</span>
+                                </label>
+                                <span>200g</span>
+                            </li>
+                            <li class="shopItem">
+                                <input type="checkbox" class="shopBtn" name="oignon" id="oignon">
+                                <label for="oignon">
+                                <span>Oignon</span>
+                                </label>
+                                <span>200g</span>
+                            </li>
+                            <li class="shopItem">
+                                <input type="checkbox" class="shopBtn" name="tomate" id="tomate">
+                                <label for="tomate">
+                                <span>Tomate</span>
+                                </label>
+                                <span>200g</span>
+                            </li>
+                            <li class="shopItem">
+                                <input type="checkbox" class="shopBtn" name="poivron" id="poivron">
+                                <label for="poivron">
+                                <span>Poivron</span>
+                                </label>
+                                <span>200g</span>
+                            </li>
+                            <li class="shopItem">
+                                <input type="checkbox" class="shopBtn" name="carotte" id="carotte">
+                                <label for="carotte">
+                                <span>Carotte</span>
+                                </label>
+                                <span>200g</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                </section> <!--shopContainer-->
+
+            </div> <!--recipeSection -->
+
+        </section>   <!--allsections-->
+    </main>
+
+</body>
+</html>
