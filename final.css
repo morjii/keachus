@@ -129,11 +129,13 @@ table {
 @font-face {
     font-family: "Gastromond";
     src: url("fonts/Gastromond.woff2") format("woff2"), url("Gastromond.woff") format("woff");
+    font-display: swap;
   }
   
   @font-face {
     font-family: "Superclarendon";
     src: url("fonts/Superclarendon-Regular.woff2") format("woff2"), url("Superclarendon-Regular.woff")format("woff");
+    font-display: swap;
   }
 
 /* mobile first */
